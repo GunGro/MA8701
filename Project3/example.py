@@ -9,4 +9,5 @@ if __name__ == "__main__":
     for num in range(1, end_int +1):
         print(f"\r{num}", end = "")
         time.sleep(0.2)
+    print()
         
