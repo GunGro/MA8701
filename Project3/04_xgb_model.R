@@ -1,7 +1,7 @@
 ################### #
 # Attach packages ----
 ################### #
-
+# hola
 library(tidyverse)
 library(tidymodels)
 library(xgboost)
@@ -101,9 +101,9 @@ model_preds %>%
   xlim(0, 500) +
   theme_minimal()
 
-# Plot of abs_dev_perc by sqm (for Tromsø and Bodø)
+# Plot of abs_dev_perc by sqm (for Troms? and Bod?)
 model_preds %>%
-  filter(kommune_name == "Tromsø" | kommune_name == "Bodø") %>%
+  filter(kommune_name == "Troms?" | kommune_name == "Bod?") %>%
   ggplot(aes(x = sqm, y = abs_dev_perc, color = as.factor(kommune_name))) +
   geom_point() +
   labs(title = "Prosentvis feil vs kvadradmeter",
