@@ -79,7 +79,7 @@ model_preds %>%
        y = "Faktisk pris [MNOK]") +
   theme_minimal()
 
-#Histogram of percentage error
+# Histogram of percentage error
 model_preds %>%
   ggplot(aes(abs_dev_perc)) + 
   geom_histogram(fill = "dodgerblue3", color = "white") +
@@ -89,7 +89,7 @@ model_preds %>%
   scale_x_continuous(limits = c(0,5), labels = scales::percent) +
   theme_minimal()
 
-#Plot of abs_dev_perc by sqm (filter by total value > 5 million) 
+# Plot of abs_dev_perc by sqm (filter by total value > 5 million) 
 model_preds %>%
   filter(truth > 5000000) %>%
   ggplot(aes(x = sqm, y = abs_dev_perc)) +
